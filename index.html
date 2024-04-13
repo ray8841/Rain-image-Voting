@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Google Drive 圖片投票</title>
+    <title>下雨圖片投票</title>
     <style>
         .image-container {
             display: flex;
@@ -48,7 +48,8 @@
 
     <script>
         const folderId = '10Hhf-V1y13pne9RaLnQLQ8e5yNTX4_VY';
-        const apiUrl = `https://www.googleapis.com/drive/v3/files?q='${folderId}'+in+parents`;
+        const apiKey = 'AIzaSyCecpeHCh5QIEwW0IIXoGimZFvSw6UWZDQ';
+        const apiUrl = `https://www.googleapis.com/drive/v3/files?q='${folderId}'+in+parents&key=${apiKey}`;
 
         document.getElementById("nicknameForm").addEventListener("submit", function(event) {
             event.preventDefault();
