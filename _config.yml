@@ -1,0 +1,25 @@
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+
+# 自訂域名
+url: "https://ray8841.github.io/rainvote/"
+
+# CORS 設定
+headers:
+  - for: "/*"
+    values:
+      Access-Control-Allow-Origin: "https://ray8841.github.io"  # 設定允許跨來源請求的域名
+      Access-Control-Allow-Methods: "GET, POST"  # 允許的請求方法
+      Access-Control-Allow-Headers: "Content-Type"  # 允許的請求標頭
+      Access-Control-Max-Age: 3600  # 預檢請求的最大緩存時間
+  # Google Drive API 的 CORS 設定
+  - for: "https://www.googleapis.com/*"
+    values:
+      Access-Control-Allow-Origin: "*"  # 允許所有域名的請求
+      Access-Control-Allow-Methods: "GET, POST"  # 允許的請求方法
+      Access-Control-Allow-Headers: "Authorization, Content-Type"  # 允許的請求標頭
+      Access-Control-Max-Age: 3600  # 預檢請求的最大緩存時間
