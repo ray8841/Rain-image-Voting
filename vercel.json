@@ -5,8 +5,5 @@
   ],
   "routes": [
     { "src": "/(.*)", "dest": "/app.py" }
-  ],
-  "env": {
-    "YOUR_ENV_VARIABLE": "your_value"
-  }
+  ]
 }
