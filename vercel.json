@@ -1,6 +1,17 @@
-
 {
-    "rewrites": [
-      { "source": "/(.*)", "destination": "/app.py" }
-    ]
+  "version": 2,
+  "builds": [
+    {
+      "src": "app.py"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/app.py"
+    }
+  ],
+  "env": {
+    "YOUR_ENV_VARIABLE": "your_value"
+  }
 }
