@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Image Voting App</title>
+</head>
+<body>
+    <h1>Image Voting App</h1>
+    <form method="POST" action="/vote">
+        <table>
+            <tr>
+                <th>Select</th>
+                <th>Image Name</th>
+                <th>Image</th>
+            </tr>
+            {% for image in image_files %}
+            <tr>
+                <td><input type="checkbox" name="selected_images" value="{{ image }}"></td>
+                <td>{{ image }}</td>
+                <td><img src="{{ url_for('get_image', filename=image) }}" width="200"></td>
+            </tr>
+            {% endfor %}
+        </table>
+        <input type="submit" value="Vote">
+    </form>
+</body>
+</html>
